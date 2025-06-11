@@ -1,0 +1,87 @@
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-success {
+    color: #28a745 ;
+}
+
+.text-danger {
+    color: #dc3535 ;
+}
+
+.btn-primary {
+    border-radius: 25px;
+}
+
+
+/* تنسيقات زر العودة للصفحة الرئيسية */
+#backToHome {
+    background-color: rgb(154, 215, 230);
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 220px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#backToHome:hover {
+    background-color: #0096cc;
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة */
+
+
+
+@media (max-width: 600px) {
+   
+}
+h2{
+    text-align: center;
+font-size: 30px;
+font-weight: bolder;
+background-color:rgb(204, 245, 253);
+border-radius: 5px;
+
+margin-bottom: 20px;
+padding: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+
+}
+#backToHome{
+background-color:rgb(154, 215, 230);
+font-size: large;
+border: none;
+padding: 10px ;
+border-radius: 5px;
+width: 220px;
+cursor: pointer;
+
+margin-top:30px;
+
+}
+#backToHome:hover {
+background-color: #0096cc;
+}

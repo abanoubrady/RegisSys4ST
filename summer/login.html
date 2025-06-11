@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        input.error {
+            border: 2px solid red;
+            background-color: #ffe6e6;
+        }
+        span.error-message {
+            color: red;
+            font-size: 14px;
+        }
+        a{
+          
+            cursor: pointer;
+            color: #00c6ff;
+            
+        }  
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm" onsubmit="loginUser(event)">
+            <h2>Login</h2>
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <br>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            <br>
+            <span id="errorMessage" class="error-message"></span>
+            <br>
+            <button type="submit">Submit</button>
+         </form>
+
+        <button id="backToHome"> Home</button><br>
+        <a onclick="window.location.href='signup.html'">Sign Up </a>
+    </div>
+    <script src="login.js"></script>
+    <script src="login2.js"></script>
+</body>
+</html>
+

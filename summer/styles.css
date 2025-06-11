@@ -1,0 +1,309 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfaff;
+    transition: opacity 1s ease;
+}
+
+
+.header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #ebfaff;
+    border-bottom: 2px solid #111111a8;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.header img {
+    height: 50px;
+    margin: 5px 0;
+}
+
+.header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1200b2;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.header .auth-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.header .auth-buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.main-content {
+    width: 100%;
+    max-width: 1360px;
+    height: 431px;
+    padding: 0;
+    margin-top: 100px;
+    background-color: rgb(205, 230, 238);
+    position: relative;
+}
+
+.main-content #slide {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    box-shadow: 8px 8px 8px 18px rgb(205, 230, 238);
+}
+
+.main-content #in {
+    display: none;
+}
+
+.main-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content .carousel-caption {
+    position: absolute;
+    bottom: 100px;
+    right: 170px;
+    width: 80%;
+    color: white;
+    text-align: left;
+    font-size: 1.8em;
+    
+    padding: 15px;
+    
+}
+
+
+.overview {
+    padding: 50px 20px;
+    background-color: #ebfaff;
+}
+
+.overview h2 {
+    margin: 10px 40px 20px  40px;
+    text-align: center;
+    font-size: 2.2em;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #1200b2;
+    outline: 1.5px solid;
+    padding: 10px 20px;
+    
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 600px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.card-info strong {
+    font-size: 1.1em;
+    color: #058fbd;
+}
+
+.card-info p {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.program {
+    padding: 30px 20px;
+    background-color: #ebfaff;
+}
+
+.program > div {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.program h1 {
+    text-align: center;
+    font-size: 1.8em;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #1200b2;
+    outline: 1.5px solid;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.program ul {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.program li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        max-width: 550px;
+    }
+    
+    .main-content .carousel-caption {
+        width: 60%;
+        right: 100px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        height: 350px;
+    }
+    
+    .main-content .carousel-caption {
+        width: 70%;
+        right: 50px;
+        bottom: 120px;
+        font-size: 1.1em;
+    }
+    
+    .card {
+        flex-direction: column;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        height: 300px;
+        margin-top: 80px;
+    }
+    
+    .main-content .carousel-caption {
+        width: 80%;
+        right: 20px;
+        bottom: 100px;
+        font-size: 1em;
+        padding: 15px;
+        display: inline !important;
+    }
+    
+    .header {
+        height: 70px;
+        padding: 5px 15px;
+    }
+    
+    .overview h2 {
+        font-size: 1.8em;
+    }
+    
+    .program h1 {
+        font-size: 1.5em;
+    }
+    
+    .program ul {
+        font-size: 1em;
+    }
+    
+    .header nav a {
+        margin: 0 10px;
+    }
+    
+    .header .auth-buttons button {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        height: 250px;
+        margin-top: 80px;
+    }
+    
+    .main-content .carousel-caption {
+        width: 70%;
+        right: 5px;
+        bottom: 100px;
+        font-size: 0.6em;
+        padding: 20px;
+        display: inline !important;
+    }
+    
+    .header {
+        height: auto;
+        padding: 5px;
+    }
+    
+    .overview h2 {
+        font-size: 1.5em;
+    }
+    
+    .header nav a {
+        margin: 0 3px;
+        font-size: 0.6em;
+    }
+    
+    .header .auth-buttons button {
+        padding: 5px 5px;
+        font-size: 0.6em;
+    }
+}
