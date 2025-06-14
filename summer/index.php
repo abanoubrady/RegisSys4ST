@@ -41,11 +41,11 @@ $conn->close();
             <div class="card shadow-lg">
                 <img src="nti.jpg" class="card-img-top" alt="NTI Training">
                 <div class="card-body text-center">
-                    <h4 class="card-title">National Telecommunication Institute <h4>(NTI)</h4> </h4>
+                    <h4 class="card-title">National Telecommunication Institute <h3>(NTI)</h1> </h3><br>
                     <p class="card-text <?php echo ($nti_status == '✅  Registration is available') ? 'text-success' : 'text-danger'; ?>">
                         <?php echo $nti_status; ?>
                     </p>
-                    <a href="https://www.nti.sci.eg/summertraining/closed.html" class="btn btn-primary" target="_blank">Website </a>
+                    <a href="https://www.nti.sci.eg/summertraining/register.php" class="btn btn-primary" target="_blank">Website </a>
                 </div>
             </div>
         </div>
