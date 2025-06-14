@@ -16,21 +16,26 @@ function fetchHTML($url) {
 }
 
 function scrapeNTI() {
-    $url = "https://www.nti.sci.eg/summertraining/closed.html";
+    $url = "https://www.nti.sci.eg/summertraining/register.php";
     $html = fetchHTML($url);
 
     if (!$html) {
         return "❌ تعذر الوصول إلى الموقع";
     }
 
-    $dom = new DOMDocument();
-    @$dom->loadHTML($html);
+    // ابحث عن الكلمات المفتاحية في الصفحة
+    $keywords = ['register', 'sign in', 'create profile'];
+    $htmlLower = strtolower($html); // تحويل المحتوى لحروف صغيرة لتسهيل البحث
 
-    $xpath = new DOMXPath($dom);
-    $trainingStatus = $xpath->query("//h4[@class='text-center text-lg-start']");
+    foreach ($keywords as $keyword) {
+        if (strpos($htmlLower, $keyword) !== false) {
+            return "✅  Registration is available";
+        }
+    }
 
-    return ($trainingStatus->length > 0) ? trim($trainingStatus->item(0)->textContent) : "❌ لا توجد بيانات";
+    return "❌ Registration is not available";
 }
+
 
 function scrapeITIDA() {
     $url = "https://itida.gov.eg/english/programs/studentsummertraining/pages/default.aspx";
